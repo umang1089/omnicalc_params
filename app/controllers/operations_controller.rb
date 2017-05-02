@@ -35,4 +35,26 @@ class OperationsController < ApplicationController
 
     render("operations/random.html.erb")
   end
+
+  def square_new
+    render("operations/square_new.html.erb")
+  end
+
+  def square_results
+    @number = params["user_number"].to_f
+    @output = @number * @number
+
+    render("operations/square.html.erb")
+  end
+  
+  def square_root_new
+    render("operations/square_root_new.html.erb")
+  end
+
+  def square_root_results
+    @number = params["user_number"].to_f
+    @output = Math.sqrt(@number)
+
+    render("operations/square_root.html.erb")
+  end
 end
