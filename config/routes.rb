@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   get("square_root/new", { :controller => "operations", :action => "square_root_new" })
 
   get("square_root/results", { :controller => "operations", :action => "square_root_results"})
+
+  get("payment/new", { :controller => "operations", :action => "payment_new"})
+
+  get("payment/results", { :controller => "operations", :action => "payment_results"})
 end
